@@ -30,12 +30,12 @@
         {
             txt_num = new TextBox();
             btn_calcular = new Button();
-            textBox2 = new TextBox();
+            txt_resultado = new TextBox();
             SuspendLayout();
             // 
             // txt_num
             // 
-            txt_num.Location = new Point(25, 34);
+            txt_num.Location = new Point(29, 153);
             txt_num.Name = "txt_num";
             txt_num.PlaceholderText = "Número";
             txt_num.Size = new Size(100, 23);
@@ -43,7 +43,7 @@
             // 
             // btn_calcular
             // 
-            btn_calcular.Location = new Point(25, 76);
+            btn_calcular.Location = new Point(29, 182);
             btn_calcular.Name = "btn_calcular";
             btn_calcular.Size = new Size(100, 23);
             btn_calcular.TabIndex = 1;
@@ -51,21 +51,22 @@
             btn_calcular.UseVisualStyleBackColor = true;
             btn_calcular.Click += btn_calcular_Click;
             // 
-            // textBox2
+            // txt_resultado
             // 
-            textBox2.Location = new Point(193, 34);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(345, 65);
-            textBox2.TabIndex = 2;
+            txt_resultado.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txt_resultado.Location = new Point(189, 12);
+            txt_resultado.Multiline = true;
+            txt_resultado.Name = "txt_resultado";
+            txt_resultado.ReadOnly = true;
+            txt_resultado.Size = new Size(345, 334);
+            txt_resultado.TabIndex = 2;
             // 
             // frm_crivoEratostenes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(562, 133);
-            Controls.Add(textBox2);
+            ClientSize = new Size(562, 358);
+            Controls.Add(txt_resultado);
             Controls.Add(btn_calcular);
             Controls.Add(txt_num);
             Name = "frm_crivoEratostenes";
@@ -79,6 +80,6 @@
 
         private TextBox txt_num;
         private Button btn_calcular;
-        private TextBox textBox2;
+        private TextBox txt_resultado;
     }
 }
