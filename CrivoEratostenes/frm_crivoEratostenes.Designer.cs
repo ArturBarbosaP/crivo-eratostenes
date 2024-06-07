@@ -54,6 +54,7 @@
             Coluna10 = new DataGridViewTextBoxColumn();
             ltx_resultado = new ListBox();
             txt_resultado = new TextBox();
+            lbl_num = new Label();
             ((System.ComponentModel.ISupportInitialize)txt_num).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dtg_listaNum).BeginInit();
             SuspendLayout();
@@ -62,7 +63,7 @@
             // 
             btn_calcular.Location = new Point(15, 48);
             btn_calcular.Name = "btn_calcular";
-            btn_calcular.Size = new Size(100, 23);
+            btn_calcular.Size = new Size(210, 23);
             btn_calcular.TabIndex = 1;
             btn_calcular.Text = "Calcular";
             btn_calcular.UseVisualStyleBackColor = true;
@@ -70,12 +71,12 @@
             // 
             // txt_num
             // 
-            txt_num.Location = new Point(15, 19);
+            txt_num.Location = new Point(125, 20);
             txt_num.Maximum = new decimal(new int[] { 5000, 0, 0, 0 });
             txt_num.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             txt_num.Name = "txt_num";
             txt_num.Size = new Size(100, 23);
-            txt_num.TabIndex = 3;
+            txt_num.TabIndex = 0;
             txt_num.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // dtg_listaNum
@@ -105,7 +106,7 @@
             dtg_listaNum.RowTemplate.Height = 50;
             dtg_listaNum.ShowEditingIcon = false;
             dtg_listaNum.Size = new Size(520, 289);
-            dtg_listaNum.TabIndex = 4;
+            dtg_listaNum.TabIndex = 3;
             dtg_listaNum.SelectionChanged += dtg_listaNum_SelectionChanged;
             // 
             // Coluna1
@@ -210,18 +211,20 @@
             // 
             // ltx_resultado
             // 
-            ltx_resultado.Font = new Font("Segoe UI", 13F);
+            ltx_resultado.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ltx_resultado.Font = new Font("Segoe UI", 12.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ltx_resultado.FormattingEnabled = true;
             ltx_resultado.HorizontalScrollbar = true;
             ltx_resultado.ItemHeight = 23;
-            ltx_resultado.Location = new Point(13, 438);
+            ltx_resultado.Location = new Point(15, 438);
             ltx_resultado.Name = "ltx_resultado";
             ltx_resultado.SelectionMode = SelectionMode.None;
             ltx_resultado.Size = new Size(520, 142);
-            ltx_resultado.TabIndex = 5;
+            ltx_resultado.TabIndex = 4;
             // 
             // txt_resultado
             // 
+            txt_resultado.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             txt_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txt_resultado.Location = new Point(15, 77);
             txt_resultado.Multiline = true;
@@ -229,19 +232,30 @@
             txt_resultado.ReadOnly = true;
             txt_resultado.ScrollBars = ScrollBars.Horizontal;
             txt_resultado.Size = new Size(520, 60);
-            txt_resultado.TabIndex = 6;
+            txt_resultado.TabIndex = 2;
             txt_resultado.WordWrap = false;
+            // 
+            // lbl_num
+            // 
+            lbl_num.AutoSize = true;
+            lbl_num.Location = new Point(15, 24);
+            lbl_num.Name = "lbl_num";
+            lbl_num.Size = new Size(104, 15);
+            lbl_num.TabIndex = 5;
+            lbl_num.Text = "Digite um número";
             // 
             // frm_crivoEratostenes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(548, 591);
+            Controls.Add(lbl_num);
             Controls.Add(txt_resultado);
             Controls.Add(ltx_resultado);
             Controls.Add(dtg_listaNum);
             Controls.Add(txt_num);
             Controls.Add(btn_calcular);
+            MinimumSize = new Size(564, 630);
             Name = "frm_crivoEratostenes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Crivo de Eratóstones";
@@ -267,5 +281,6 @@
         private DataGridViewTextBoxColumn Coluna8;
         private DataGridViewTextBoxColumn Coluna9;
         private DataGridViewTextBoxColumn Coluna10;
+        private Label lbl_num;
     }
 }
